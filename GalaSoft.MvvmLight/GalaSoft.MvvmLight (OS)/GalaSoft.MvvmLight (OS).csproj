@@ -1,0 +1,114 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>GalaSoft.MvvmLight</AssemblyName>
+    <RootNamespace>GalaSoft.MvvmLight</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;OPENSILVER;</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="**" />
+    <None Remove="**" />
+    <EmbeddedResource Remove="**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Command\RelayCommand.cs">
+      <Link>Command\RelayCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Command\RelayCommandGeneric.cs">
+      <Link>Command\RelayCommandGeneric.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Helpers\DesignerPlatformLibrary.cs">
+      <Link>Helpers\DesignerPlatformLibrary.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Helpers\IExecuteWithObject.cs">
+      <Link>Helpers\IExecuteWithObject.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Helpers\IExecuteWithObjectAndResult.cs">
+      <Link>Helpers\IExecuteWithObjectAndResult.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Helpers\WeakAction.cs">
+      <Link>Helpers\WeakAction.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Helpers\WeakActionGeneric.cs">
+      <Link>Helpers\WeakActionGeneric.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Helpers\WeakFunc.cs">
+      <Link>Helpers\WeakFunc.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Helpers\WeakFuncGeneric.cs">
+      <Link>Helpers\WeakFuncGeneric.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\ICleanup.cs">
+      <Link>ICleanup.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Messaging\DialogMessage.cs">
+      <Link>Messaging\DialogMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Messaging\GenericMessage.cs">
+      <Link>Messaging\GenericMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Messaging\IMessenger.cs">
+      <Link>Messaging\IMessenger.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Messaging\MessageBase.cs">
+      <Link>Messaging\MessageBase.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Messaging\Messenger.cs">
+      <Link>Messaging\Messenger.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Messaging\NotificationMessage.cs">
+      <Link>Messaging\NotificationMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Messaging\NotificationMessageAction.cs">
+      <Link>Messaging\NotificationMessageAction.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Messaging\NotificationMessageActionGeneric.cs">
+      <Link>Messaging\NotificationMessageActionGeneric.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Messaging\NotificationMessageGeneric.cs">
+      <Link>Messaging\NotificationMessageGeneric.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Messaging\NotificationMessageWithCallback.cs">
+      <Link>Messaging\NotificationMessageWithCallback.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Messaging\PropertyChangedMessage.cs">
+      <Link>Messaging\PropertyChangedMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Messaging\PropertyChangedMessageBase.cs">
+      <Link>Messaging\PropertyChangedMessageBase.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\ObservableObject.cs">
+      <Link>ObservableObject.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\ViewModelBase.cs">
+      <Link>ViewModelBase.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Views\IDialogService.cs">
+      <Link>Views\IDialogService.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Views\INavigationService.cs">
+      <Link>Views\INavigationService.cs</Link>
+    </Compile>
+    <Compile Include="..\GalaSoft.MvvmLight.Platform %28NET45%29\Threading\DispatcherHelper.cs">
+      <Link>Threading\DispatcherHelper.cs</Link>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenSilver" Version="2.0.0-alpha49-068" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy &quot;C:\Users\Pierre\Documents\CSHTML5_Internal\mvvmlight\GalaSoft.MvvmLight\GalaSoft.MvvmLight (OS)\bin\Debug\netstandard2.0\GalaSoft.MvvmLight.dll&quot; &quot;C:\Users\Pierre\Documents\Client_Projects\Client_REP\ReptonPoD\Migration\Assemblies\MvvmLight&quot;&#xD;&#xA;copy &quot;C:\Users\Pierre\Documents\CSHTML5_Internal\mvvmlight\GalaSoft.MvvmLight\GalaSoft.MvvmLight (OS)\bin\Debug\netstandard2.0\GalaSoft.MvvmLight.pdb&quot; &quot;C:\Users\Pierre\Documents\Client_Projects\Client_REP\ReptonPoD\Migration\Assemblies\MvvmLight&quot;" />
+  </Target>
+
+</Project>

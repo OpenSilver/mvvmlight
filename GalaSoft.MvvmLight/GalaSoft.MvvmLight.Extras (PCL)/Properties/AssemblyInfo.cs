@@ -13,6 +13,12 @@
 // </license>
 // ****************************************************************************
 
+#if OPENSILVER
+
+[assembly: System.Windows.Markup.XmlnsDefinition("http://www.galasoft.ch/mvvmlight", "GalaSoft.MvvmLight.Command")]
+
+#else
+
 using System;
 using System.Reflection;
 using System.Resources;
@@ -40,3 +46,4 @@ using System.Runtime.InteropServices;
 [assembly:NeutralResourcesLanguage("en-US")]
 
 [assembly: AssemblyVersion("5.4.1.0")]
+#endif

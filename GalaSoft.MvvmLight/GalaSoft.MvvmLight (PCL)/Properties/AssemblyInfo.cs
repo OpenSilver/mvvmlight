@@ -13,6 +13,11 @@
 // </license>
 // ****************************************************************************
 
+#if OPENSILVER
+
+
+#else
+
 using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -30,3 +35,4 @@ using System.Runtime.InteropServices;
 [assembly: CLSCompliant(true)]
 
 [assembly: AssemblyVersion("5.4.1.0")]
+#endif
