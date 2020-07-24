@@ -104,11 +104,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OpenSilver" Version="2.0.0-alpha49-068" />
+    <PackageReference Include="OpenSilver.WorkInProgress" Version="1.0.0-alpha-006" />
   </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy &quot;C:\Users\Pierre\Documents\CSHTML5_Internal\mvvmlight\GalaSoft.MvvmLight\GalaSoft.MvvmLight (OS)\bin\Debug\netstandard2.0\GalaSoft.MvvmLight.dll&quot; &quot;C:\Users\Pierre\Documents\Client_Projects\Client_REP\ReptonPoD\Migration\Assemblies\MvvmLight&quot;&#xD;&#xA;copy &quot;C:\Users\Pierre\Documents\CSHTML5_Internal\mvvmlight\GalaSoft.MvvmLight\GalaSoft.MvvmLight (OS)\bin\Debug\netstandard2.0\GalaSoft.MvvmLight.pdb&quot; &quot;C:\Users\Pierre\Documents\Client_Projects\Client_REP\ReptonPoD\Migration\Assemblies\MvvmLight&quot;" />
-  </Target>
 
 </Project>
