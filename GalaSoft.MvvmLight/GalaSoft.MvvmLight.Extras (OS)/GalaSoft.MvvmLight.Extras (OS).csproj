@@ -1,21 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>GalaSoft.MvvmLight.Extras</AssemblyName>
     <RootNamespace>GalaSoft.MvvmLight</RootNamespace>
+    <DefineConstants>$(DefineConstants);NEWLOCATOR;SILVERLIGHT;OPENSILVER</DefineConstants>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>DEBUG;SILVERLIGHT;OPENSILVER;</DefineConstants>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="**" />
-    <None Remove="**" />
-    <EmbeddedResource Remove="**" />
-  </ItemGroup>
-  
   <ItemGroup>
     <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Helpers\DesignerPlatformLibrary.cs">
       <Link>Helpers\DesignerPlatformLibrary.cs</Link>
@@ -41,17 +32,8 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="OpenSilver.WorkInProgress" Version="1.0.0-alpha-006" />
+    <PackageReference Include="CommonServiceLocator" Version="2.0.5" />
+    <PackageReference Include="OpenSilver.WorkInProgress" Version="1.0.0-alpha-008" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>ExtLibs\Microsoft.Practices.ServiceLocation.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="rem copy &quot;C:\Users\Pierre\Documents\CSHTML5_Internal\mvvmlight\GalaSoft.MvvmLight\GalaSoft.MvvmLight.Extras (OS)\bin\Debug\netstandard2.0\GalaSoft.MvvmLight.Extras.dll&quot; &quot;C:\Users\Pierre\Documents\Client_Projects\Client_REP\ReptonPoD\Migration\Assemblies\MvvmLight&quot;&#xD;&#xA;rem copy &quot;C:\Users\Pierre\Documents\CSHTML5_Internal\mvvmlight\GalaSoft.MvvmLight\GalaSoft.MvvmLight.Extras (OS)\bin\Debug\netstandard2.0\GalaSoft.MvvmLight.Extras.pdb&quot; &quot;C:\Users\Pierre\Documents\Client_Projects\Client_REP\ReptonPoD\Migration\Assemblies\MvvmLight&quot;" />
-  </Target>
 
 </Project>

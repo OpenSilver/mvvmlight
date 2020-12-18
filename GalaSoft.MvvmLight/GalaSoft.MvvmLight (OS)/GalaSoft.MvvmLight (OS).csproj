@@ -4,17 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>GalaSoft.MvvmLight</AssemblyName>
     <RootNamespace>GalaSoft.MvvmLight</RootNamespace>
+    <DefineConstants>$(DefineConstants);SILVERLIGHT;OPENSILVER;</DefineConstants>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;OPENSILVER;</DefineConstants>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="**" />
-    <None Remove="**" />
-    <EmbeddedResource Remove="**" />
-  </ItemGroup>
 
   <ItemGroup>
     <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Command\RelayCommand.cs">
@@ -104,7 +95,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OpenSilver.WorkInProgress" Version="1.0.0-alpha-006" />
+    <PackageReference Include="OpenSilver.WorkInProgress" Version="1.0.0-alpha-008" />
   </ItemGroup>
 
 </Project>

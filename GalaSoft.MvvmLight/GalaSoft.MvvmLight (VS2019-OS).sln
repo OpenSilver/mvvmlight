@@ -7,11 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GalaSoft.MvvmLight (OS)", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GalaSoft.MvvmLight.Extras (OS)", "GalaSoft.MvvmLight.Extras (OS)\GalaSoft.MvvmLight.Extras (OS).csproj", "{BFFF1534-F304-4C42-AD18-453BA0C1C17E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExtLibs", "ExtLibs", "{7363F9A6-7A7C-46E2-81E5-0381F086B0E8}"
-	ProjectSection(SolutionItems) = preProject
-		GalaSoft.MvvmLight.Extras (OS)\ExtLibs\Microsoft.Practices.ServiceLocation.dll = GalaSoft.MvvmLight.Extras (OS)\ExtLibs\Microsoft.Practices.ServiceLocation.dll
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
