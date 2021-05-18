@@ -256,3 +256,9 @@ paket-files/
 /Samples/DispatcherHelperSampleStd/packages/
 /GalaSoft.MvvmLight/packages/
 /Samples/Navigation/packages/
+
+# OpenSilver
+Nuget/opensilver/output/**/*
+
+
+

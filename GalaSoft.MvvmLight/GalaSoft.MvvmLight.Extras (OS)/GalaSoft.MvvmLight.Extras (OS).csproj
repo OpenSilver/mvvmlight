@@ -33,7 +33,7 @@
   
   <ItemGroup>
     <PackageReference Include="CommonServiceLocator" Version="2.0.5" />
-    <PackageReference Include="OpenSilver.WorkInProgress" Version="1.0.0-alpha-008" />
+    <PackageReference Include="OpenSilver.WorkInProgress" Version="1.0.0-alpha-018" />
   </ItemGroup>
 
 </Project>
