@@ -6,7 +6,7 @@
     <title>MvvmLight.OpenSilver for OpenSilver</title>
     <authors>Userware</authors>
     <description>MvvmLight.OpenSilver for Silverlight compiled with OpenSilver</description>
-    <projectUrl>https://www.opensilver.net</projectUrl>
+    <projectUrl>https://github.com/OpenSilver/mvvmlight</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright (c) 2022, Userware. All rights reserved.</copyright>
     <dependencies>
