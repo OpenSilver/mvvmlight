@@ -2,11 +2,11 @@ name: MvvmLight.OpenSilver Build
 on:
   push:
     branches:
-      - cicd
+      - master
 jobs:
   Build-Pack-Publish:
     #We should not run these steps on the forks by default.
-    #if: github.repository_owner == 'OpenSilver'
+    if: github.repository_owner == 'OpenSilver'
     runs-on: windows-2019
     steps:
       - uses: microsoft/setup-msbuild@v1.0.3
