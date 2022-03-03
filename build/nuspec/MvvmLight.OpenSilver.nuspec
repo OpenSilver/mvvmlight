@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>$PackageId$</id>
+    <version>$PackageVersion$</version>
+    <title>MvvmLight.OpenSilver for OpenSilver</title>
+    <authors>Userware</authors>
+    <description>MvvmLight.OpenSilver for Silverlight compiled with OpenSilver</description>
+    <projectUrl>https://www.opensilver.net</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright (c) 2022, Userware. All rights reserved.</copyright>
+    <dependencies>
+      <group targetFramework="netstandard2.0">
+        <dependency id="OpenSilver" version="1.0.0-private-2022-03-01-100352-a5e386dd" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="../../GalaSoft.MvvmLight/GalaSoft.MvvmLight.Extras (OS)/bin/$Configuration$/netstandard2.0/GalaSoft.MvvmLight.Extras.dll" target="lib/netstandard2.0/GalaSoft.MvvmLight.Extras.dll" />
+    <file src="../../GalaSoft.MvvmLight/GalaSoft.MvvmLight.Extras (OS)/bin/$Configuration$/netstandard2.0/GalaSoft.MvvmLight.Extras.pdb" target="lib/netstandard2.0/GalaSoft.MvvmLight.Extras.pdb" />
+    <file src="../../GalaSoft.MvvmLight/GalaSoft.MvvmLight (OS)/bin/$Configuration$/netstandard2.0/GalaSoft.MvvmLight.dll" target="lib/netstandard2.0/GalaSoft.MvvmLight.dll" />
+    <file src="../../GalaSoft.MvvmLight/GalaSoft.MvvmLight (OS)/bin/$Configuration$/netstandard2.0/GalaSoft.MvvmLight.pdb" target="lib/netstandard2.0/GalaSoft.MvvmLight.pdb" />
+  </files>
+</package>

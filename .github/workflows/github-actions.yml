@@ -1,0 +1,45 @@
+name: MvvmLight.OpenSilver Build
+on:
+  push:
+    branches:
+      - cicd
+jobs:
+  OpenSilver-Build:
+    #We should not run these steps on the forks by default.
+    #if: github.repository_owner == 'OpenSilver'
+    runs-on: windows-2019
+    steps:
+      - uses: microsoft/setup-msbuild@v1.0.3
+      - name: Inject slug/short variables
+        uses: rlespinasse/github-slug-action@v3.x
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+      - name: Clone MvvmLight.OpenSilver repo
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+      - name: Restore Packages
+        run: |
+          nuget restore GalaSoft.MvvmLight/GalaSoft.MvvmLight (VS2019-OS).sln -v quiet
+      - name: Build MvvmLight.OpenSilver
+        working-directory: build
+        run: msbuild slnf/MvvmLight.OpenSilver.slnf -p:Configuration=Release -clp:ErrorsOnly -restore
+      - name: Format Package Version
+        id: version
+        run: echo "::set-output name=suffix::$(date +'%Y-%m-%d-%H%M%S')-${{ env.GITHUB_SHA_SHORT }}"
+      - name: Pack MvvmLight.OpenSilver
+        working-directory: build
+        run: |
+          mkdir temp; echo "MvvmLight.OpenSilver 1.0.0-private-${{ steps.version.outputs.suffix }}" > temp/Version.txt
+          nuget pack nuspec\MvvmLight.OpenSilver.nuspec -OutputDirectory "output/MvvmLight.OpenSilver" -Properties "PackageId=MvvmLight.OpenSilver;PackageVersion=1.0.0-private-${{ steps.version.outputs.suffix }};Configuration=Release;Target=MvvmLight.OpenSilver;RepositoryUrl=https://github.com/${{ env.GITHUB_REPOSITORY_OWNER_PART }}/${{ env.GITHUB_REPOSITORY_NAME_PART }}"
+      - uses: actions/upload-artifact@v2
+        with:
+          name: MvvmLight.OpenSilver
+          path: "build/output/MvvmLight.OpenSilver"
+      # - name: Upload packages
+      #   run: |
+      #      dotnet nuget push "build\output\MvvmLight.OpenSilver\*.nupkg" -k ${{ secrets.GITHUB_TOKEN }} -s https://nuget.pkg.github.com/${{ env.GITHUB_REPOSITORY_OWNER_PART }}/index.json
+      - name: Upload packages to MyGet
+        run: |
+           dotnet nuget push "build\output\MvvmLight.OpenSilver\*.nupkg" -k ${{ secrets.MYGET_TOKEN }} -s ${{ secrets.MyGET_FEED_URL }}
