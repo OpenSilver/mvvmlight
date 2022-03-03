@@ -25,7 +25,7 @@ md temp
 echo. 
 echo %ESC%[95mRestoring NuGet packages%ESC%[0m
 echo. 
-nuget restore "../GalaSoft.MvvmLight/GalaSoft.MvvmLight (VS2019-OS).sln" -v quiet
+nuget restore "../GalaSoft.MvvmLight/GalaSoft.MvvmLight.OpenSilver.sln" -v quiet
 
 echo. 
 echo %ESC%[95mBuilding %ESC%[0mRelease %ESC%[95mconfiguration%ESC%[0m
