@@ -21,7 +21,7 @@ jobs:
           ref: ${{ github.ref }}
       - name: Restore Packages
         run: |
-          nuget restore GalaSoft.MvvmLight/GalaSoft.MvvmLight (VS2019-OS).sln -v quiet
+          nuget restore GalaSoft.MvvmLight/GalaSoft.MvvmLight.OpenSilver.sln -v quiet
       - name: Build MvvmLight.OpenSilver
         working-directory: build
         run: msbuild slnf/MvvmLight.OpenSilver.slnf -p:Configuration=Release -clp:ErrorsOnly -restore
