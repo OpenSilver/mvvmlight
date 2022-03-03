@@ -260,5 +260,6 @@ paket-files/
 # OpenSilver
 Nuget/opensilver/output/**/*
 
-
+build/output
+build/temp
 
