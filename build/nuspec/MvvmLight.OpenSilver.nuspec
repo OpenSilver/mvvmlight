@@ -11,7 +11,7 @@
     <copyright>Copyright (c) 2022, Userware. All rights reserved.</copyright>
     <dependencies>
       <group targetFramework="netstandard2.0">
-        <dependency id="OpenSilver" version="1.0.0-private-2022-03-01-100352-a5e386dd" />
+        <dependency id="OpenSilver" version="1.0.0-private-2022-05-05-210354-9d86277b" />
       </group>
     </dependencies>
   </metadata>
