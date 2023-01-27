@@ -95,7 +95,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OpenSilver" Version="1.0.0-private-2022-05-05-210354-9d86277b" />
+    <PackageReference Include="OpenSilver" Version="1.2.0-preview-2023-01-27-093240-5c10d3f4" />
   </ItemGroup>
 
 </Project>
