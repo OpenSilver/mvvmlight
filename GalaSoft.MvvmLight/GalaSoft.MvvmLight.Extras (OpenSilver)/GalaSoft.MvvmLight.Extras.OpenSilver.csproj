@@ -4,8 +4,14 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>GalaSoft.MvvmLight.Extras</AssemblyName>
     <RootNamespace>GalaSoft.MvvmLight</RootNamespace>
-    <DefineConstants>$(DefineConstants);NEWLOCATOR;SILVERLIGHT;OPENSILVER</DefineConstants>
+    <DefineSilverlight>true</DefineSilverlight>
+    <DefineConstants>$(DefineConstants);NEWLOCATOR</DefineConstants>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommonServiceLocator" Version="2.0.5" />
+    <PackageReference Include="OpenSilver" Version="2.2.0-preview-2024-04-23-164624-af8784ba" />
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Helpers\DesignerPlatformLibrary.cs">
@@ -29,11 +35,6 @@
     <Compile Include="..\GalaSoft.MvvmLight.Platform %28NET45%29\Command\IEventArgsConverter.cs">
       <Link>Command\IEventArgsConverter.cs</Link>
     </Compile>
-  </ItemGroup>
-  
-  <ItemGroup>
-    <PackageReference Include="CommonServiceLocator" Version="2.0.5" />
-    <PackageReference Include="OpenSilver" Version="2.0.0" />
   </ItemGroup>
 
 </Project>

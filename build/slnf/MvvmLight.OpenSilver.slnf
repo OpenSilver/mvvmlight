@@ -1,9 +1,0 @@
-{
-  "solution": {
-    "path": "..\\..\\GalaSoft.MvvmLight\\GalaSoft.MvvmLight.OpenSilver.sln",
-    "projects": [
-      "GalaSoft.MvvmLight (OS)\\GalaSoft.MvvmLight (OS).csproj",
-      "GalaSoft.MvvmLight.Extras (OS)\\GalaSoft.MvvmLight.Extras (OS).csproj"
-	]
-  }
-}
