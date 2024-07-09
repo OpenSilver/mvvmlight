@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="CommonServiceLocator" Version="2.0.5" />
-    <PackageReference Include="OpenSilver" Version="2.2.0" />
+    <PackageReference Include="OpenSilver" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>
