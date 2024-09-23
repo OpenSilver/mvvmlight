@@ -6,11 +6,11 @@
     <RootNamespace>GalaSoft.MvvmLight</RootNamespace>
     <DefineSilverlight>true</DefineSilverlight>
     <DefineConstants>$(DefineConstants);NEWLOCATOR</DefineConstants>
+    <UseOpenSilver>true</UseOpenSilver>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="CommonServiceLocator" Version="2.0.5" />
-    <PackageReference Include="OpenSilver" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>

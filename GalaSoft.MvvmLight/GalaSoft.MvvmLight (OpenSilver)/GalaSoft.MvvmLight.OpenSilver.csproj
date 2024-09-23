@@ -5,11 +5,8 @@
     <AssemblyName>GalaSoft.MvvmLight</AssemblyName>
     <RootNamespace>GalaSoft.MvvmLight</RootNamespace>
     <DefineSilverlight>true</DefineSilverlight>
+    <UseOpenSilver>true</UseOpenSilver>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="OpenSilver" Version="3.0.0" />
-  </ItemGroup>
 
   <ItemGroup>
     <Compile Include="..\GalaSoft.MvvmLight %28PCL%29\Command\RelayCommand.cs">

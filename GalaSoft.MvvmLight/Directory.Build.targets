@@ -1,0 +1,11 @@
+<Project>
+
+  <PropertyGroup>
+    <OpenSilverVersion Condition=" '$(OpenSilverVersion)' == '' ">3.0.0</OpenSilverVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenSilver" Version="$(OpenSilverVersion)" Condition=" '$(UseOpenSilver)' == 'true' "/>
+  </ItemGroup>
+
+</Project>
