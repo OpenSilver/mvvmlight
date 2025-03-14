@@ -8,7 +8,7 @@
     <description>MvvmLight for Silverlight compiled with OpenSilver</description>
     <projectUrl>https://github.com/OpenSilver/mvvmlight</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <copyright>Copyright (c) 2024, Userware. All rights reserved.</copyright>
+    <copyright>Copyright (c) 2025, Userware. All rights reserved.</copyright>
     <dependencies>
       <group targetFramework="netstandard2.0">
         <dependency id="OpenSilver" version="$OpenSilverDependencyVersion$" />
