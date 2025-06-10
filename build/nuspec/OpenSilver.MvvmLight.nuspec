@@ -12,13 +12,12 @@
     <dependencies>
       <group targetFramework="netstandard2.0">
         <dependency id="OpenSilver" version="$OpenSilverDependencyVersion$" />
+        <dependency id="CommonServiceLocator" version="2.0.5" />
       </group>
     </dependencies>
   </metadata>
   <files>
     <file src="../../GalaSoft.MvvmLight/GalaSoft.MvvmLight.Extras (OpenSilver)/bin/$Configuration$/netstandard2.0/GalaSoft.MvvmLight.Extras.dll" target="lib/netstandard2.0/GalaSoft.MvvmLight.Extras.dll" />
-    <file src="../../GalaSoft.MvvmLight/GalaSoft.MvvmLight.Extras (OpenSilver)/bin/$Configuration$/netstandard2.0/GalaSoft.MvvmLight.Extras.pdb" target="lib/netstandard2.0/GalaSoft.MvvmLight.Extras.pdb" />
     <file src="../../GalaSoft.MvvmLight/GalaSoft.MvvmLight (OpenSilver)/bin/$Configuration$/netstandard2.0/GalaSoft.MvvmLight.dll" target="lib/netstandard2.0/GalaSoft.MvvmLight.dll" />
-    <file src="../../GalaSoft.MvvmLight/GalaSoft.MvvmLight (OpenSilver)/bin/$Configuration$/netstandard2.0/GalaSoft.MvvmLight.pdb" target="lib/netstandard2.0/GalaSoft.MvvmLight.pdb" />
   </files>
 </package>
